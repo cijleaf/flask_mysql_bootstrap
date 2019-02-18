@@ -1,0 +1,18 @@
+<script type="text/javascript">
+     $(".chosen-select").chosen({
+        no_results_text: "Oops, nothing found!"
+    })
+    window.onload = function () {
+        document.getElementById("main-more").style.display = "block";
+        document.getElementById("sub-more").style.display = "none";
+        document.getElementById("loadmore").style.display = "block";
+    }
+
+    $(document).ready(function () {
+        $("#loadmore").click(function () {
+            document.getElementById("main-more").style.display = "block";
+            document.getElementById("sub-more").style.display = "block";
+            document.getElementById("loadmore").style.display = "none";
+        });
+    });
+</script>

@@ -1,0 +1,160 @@
+
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript">
+    (function ($) {
+        $(function () {
+            $('.test').fSelect();
+        });
+    })(jQuery);
+
+    $(document).ready(function () {
+        $(".startDate").datepicker({
+            format: 'yyyy-mm-dd'
+        });
+        $(".endDate").datepicker({
+            format: 'yyyy-mm-dd'
+        });
+    });
+
+    window.onload = function () {
+        $("#aggregationform").css("display", "none");
+        $("#searchform").css("display", "block");
+        $("#mapform").css("display", "none");
+        $("#sub-slider").css("display", "none");
+        $('#Search').addClass('activebtn');
+
+        document.getElementById("main-more").style.display = "block";
+        document.getElementById("sub-more").style.display = "none";
+        document.getElementById("btn-more").style.display = "block";
+        $('#all').addClass('active');
+        get_btnvalue1('bayut')
+    }
+
+    function get_btnvalue1(obj) {
+        var id = obj;
+        var hasid = '#' + id;
+        $('.btn-active').removeClass('active');
+        $(hasid).addClass('active');
+        if (id == 'bayut') {
+            $("#bayut-main").css("display", "block");
+            $("#dubizzel-main").css("display", "none");
+            $("#propertyinder-main").css("display", "none");
+            var locations = [
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.10037710, 55.17501820, 4]
+            ];
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(25.2048, 55.2708),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var infowindow = new google.maps.InfoWindow();
+            var marker, i;
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+
+        } else if (id == 'dubizzel') {
+            $("#bayut-main").css("display", "none");
+            $("#dubizzel-main").css("display", "block");
+            $("#propertyinder-main").css("display", "none");
+            var locations = [
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.10037710, 55.17501820, 4],
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.09696200, 55.17759990, 5],
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.07694410, 55.13413460, 3]
+            ];
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(25.2048, 55.2708),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var infowindow = new google.maps.InfoWindow();
+            var marker, i;
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+        } else {
+            $("#bayut-main").css("display", "none");
+            $("#dubizzel-main").css("display", "none");
+            $("#propertyinder-main").css("display", "block");
+            var locations = [
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.10037710, 55.17501820, 4],
+                ['<ul class="map-ul"> <li> <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg"></li><li class="title-li"><p title="top-title">Alluring 3BR Ababian Villa With Garden</p> <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p><p title="desc">1 beds | 1 baths | 1200 sq.ft</p></li></ul>', 25.09696200, 55.17759990, 5]
+            ];
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: new google.maps.LatLng(25.2048, 55.2708),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+            var infowindow = new google.maps.InfoWindow();
+            var marker, i;
+            for (i = 0; i < locations.length; i++) {
+                marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map
+                });
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+            }
+        }
+    }
+    function get_btnvalue(obj) {
+        var id = obj.id;
+        var hasid = '#' + id;
+        $('.btn-default').removeClass('activebtn');
+        $(hasid).addClass('activebtn');
+        if (id == 'Search') {
+            $("#searchform").css("display", "block");
+            $("#aggregationform").css("display", "none");
+            $("#mapform").css("display", "none");
+            $("#sub-slider").css("display", "none");
+            $("#main-slider").css("display", "block");
+
+        } else if (id == 'Aggregation') {
+            $("#aggregationform").css("display", "block");
+            $("#searchform").css("display", "none");
+            $("#mapform").css("display", "none");
+            $("#sub-slider").css("display", "none");
+            $("#main-slider").css("display", "block");
+        } else {
+            window.location.href = '#map-view';
+        }
+    }
+    $(document).ready(function () {
+        $("#vewmore").click(function () {
+            document.getElementById("main-more").style.display = "block";
+            document.getElementById("sub-more").style.display = "block";
+            document.getElementById("btn-more").style.display = "none";
+        });
+        $("#reset-btn").click(function () {
+
+            $('#serach-form')[0].reset();
+        });
+        $("#resetbtn").click(function () {
+            $('#serach-form')[0].reset();
+
+        });
+    });
+
+</script>

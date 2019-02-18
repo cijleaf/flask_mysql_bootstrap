@@ -1,0 +1,186 @@
+
+<form action="/search">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">City</label>
+                <select multiple class="test"  id="city" name="city">
+                    <option value="All">All cities</option>
+                    {% for city in cities%}
+                    <option value="{{city[0]}}">{{city[0]}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Bedrooms</label>
+                <select multiple class="test" id="bedrooms" name="bedrooms">
+                    <option value="All">All</option>
+                    {% for room in rooms%}
+                    <option value="{{room[0]}}">{{room[0]}}</option>
+                    {%endfor%}
+
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Min Price</label>
+                <select class="test" id="minPrice" name="minprice">
+                    <option value="">Select</option>
+                    {% for i in range(10000,50000001,10000)%}
+                    <option value="{{i}}">{{i}} AED</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Max Price</label>
+                <select class="test" id="maxPrice" name="maxprice">
+                    <option value="">Select</option>
+                        {% for i in range(10000,50000001,10000)%}
+                        <option value="{{i}}">{{i}} AED</option>
+                        {%endfor%}
+                        {% for i in range(51000000,400000001,1000000)%}
+                        <option value="{{i}}">{{i}} AED</option>
+                        {%endfor%}
+                </select>
+            </div> 
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Agency</label>
+                <select multiple class="test" id="agency" name="agency">
+                    <option value="All" selected>All Agency</option>
+                    {%for agency in agencies%}
+                    <option value="{{agency[1]}}">{{agency[1]}}</option>
+                    {%endfor%}
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Category</label>
+                <select multiple class="test" id="category" name="category">
+
+                    <option value="All-All">All</option>
+                    <option value="Commercial-All">Commercial</option>
+                    <option value="All-Office">-- Office</option>
+                    <option value="All-Shop">-- Shop</option>
+                    <option value="Commercial-Villa">-- Villa</option>
+                    <option value="All-Showroom">-- Showroom</option>
+                    <option value="All-Labour Camp">-- Labour Camp</option>
+                    <option value="All-Warehouse">-- Warehouse</option>
+                    <option value="All-Show Room">-- Show Room</option>
+                    <option value="All-Retail">-- Retail</option>
+                    <option value="All-Industrial">-- Industrial</option>
+                    <option value="All-Industrial Land">-- Industrial Land</option>
+                    <option value="All-Staff Accomm">-- Staff Accomm</option>
+                    <option disabled>_________</option>
+
+                    <option value="Residental-All">Residental</option>
+                    <option value="All-Apartment" selected>-- Apartment</option>
+                    <option value="Residental-Villa">-- Villa</option>
+                    <option value="All-Duplex">-- Duplex</option>
+                    <option value="All-Hotel + Hotel Apartment">-- Hotel & Hotel Apartment</option>
+                    <option value="All-Townhouse">-- Townhouse</option>
+                    <option value="All-Penthouse">-- Penthouse</option>
+                    <option value="All-Land">-- Land</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Type</label>
+                <select class="test" id="type" name="type">
+                    <option value="Sale">Sale</option>
+                    <option value="Rent">Rent</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <div class="form-group">
+                <label for="usr">Period</label>
+                <select  class="test"  id="period" name="period">
+                    <option value="0">Today</option>
+                    <option value="7">Last 7 days</option>
+                    <option value="15">Last 15 days</option>
+                    <option value="30" selected>Last 30 days</option>
+                    <option value="60">Last 60 days</option>
+                    <option value="90">Last 90 days</option>
+                    <option value="All">All</option>
+                </select>
+
+            </div>
+        </div>
+        <!--
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="row radioinlinelabel">
+                    <label for="usr">Time Period</label>
+                </div>
+                <div class="row radioinline">
+                    <label class="container-radio radio-inline">
+                        <input class="custom-control-label optradio" type="radio" name="optradio" value="0">Today
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-radio radio-inline">
+                        <input class="optradio" type="radio" name="optradio" value="7">Last 7 days
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-radio radio-inline">
+                        <input class="optradio" type="radio" name="optradio" checked value="30">Last 30 days
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container-radio radio-inline">
+                        <input class="optradio" type="radio" name="optradio" value="All">Above 7 days
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+    
+            </div>
+        </div>
+        -->
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+            <label class="form-check container-radio radio-inline">
+                <input class="custom-control-label optradio" type="checkbox" name="doubles" checked> Drop Duplicates
+                <span class="checkmark checkmarkrad"></span>
+            </label>
+        </div>
+
+
+        <!--        <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                    
+                    <div class="form-group">
+                        <label for="usr">Type</label>
+                        <select class="form-control" id="city" name="type">
+                            <option value="Sale">Sale</option>
+                            <option value="Rent">Rent</option>
+                        </select>
+                    </div>
+                    
+                </div>-->
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12"><br /></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="btn-go-reset">
+                <button type="submit" class="btn btn-default btn-form">Go</button>
+                <button type="reset" class="btn btn-default btn-form">Reset</button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            {%include 'stat_tab.html'%}
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3"></div>
+    </div>
+</form>

@@ -1,0 +1,185 @@
+
+<style>
+    .page-item.active .page-link {
+        z-index: 1;
+        color: #fff;
+        background-color: #29B2AA;
+        border-color: #29B2AA;
+    }
+    .page-link {
+        color: #29B2AA;
+    }
+    .page-link:hover {
+        color: #29B2AA;
+    }
+    @media screen and (orientation:landscape) and  (width:1024px){
+        .sub-jumbotron-body-1 {
+            padding-bottom: 30px;
+            border-bottom: solid 2px #E6E6E6;
+            width: 100%;
+            overflow: scroll;
+        }
+    }
+    @media screen and (max-width:320px) {
+        .layer {
+            background-color: #151F244D;
+            width: 88%;
+        }
+        .text {
+            width: 88%;
+        }
+    }
+</style>
+<section id="search-area-1" class="search-area-1">
+    <div class="container">
+        {%for dt in data%}
+        <div class="jumbotron">
+            <p class="jumbotron-p">{{dt[-1]}}</p>
+
+            <div class="sell-rent-btn">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-default-{{dt[-1].replace(' ', '')}} bbrl btnsr" id="Sale-{{dt[-1].replace(' ', '')}}" onclick="get_btnvalue(this)">Sell</button>
+                    <button type="button" class="btn btn-default-{{dt[-1].replace(' ', '')}} bbrr btnsr" id="Rent-{{dt[-1].replace(' ', '')}}" onclick="get_btnvalue(this)">Rent</button>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron-body rent-properites-{{dt[-1].replace(' ', '')}}" style="margin-top: -19px;" id="rent-properites">
+            {%for key in dt[0].keys()%}
+            {%for row in dt[0][key]['Rent']%}
+            <div class="sub-jumbotron-body-1">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="body-content jumbotron-body-img">
+                                <img class="body-img" src="{{row[-2]}}" alt="Course" onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/no_photo.png') }}';">
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/sale.png') }}" height="24px" >
+                                <p class="col-p1 setpimage">{{row[14]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/bedroom.png') }}">
+                                <p class="col-p1 setpimage">{{row[16]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/bathroom.png') }}">
+                                <p class="col-p1 setpimage">{{row[3]}} Sq Ft</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Min %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][0]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Avg %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][1]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Med %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][2]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Max %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][3]}}</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <span class="jumbotron-body-p-span"> <p class="jumbotron-body-p"><a style="color: #000000" href="{{row[-5]}}" target="_blank">{{row[4]}}</a></p> </span>
+                    <span class="jumbotron-body-p-span"> <p class="jumbotron-body-p">{{row[-4]}}</p> </span>
+                </table>
+            </div>
+            {%endfor%}
+            {%endfor%}
+        </div>
+        <div class="jumbotron-body sale-properites-{{dt[-1].replace(' ', '')}}" style="margin-top: -19px;" id="sale-properites">
+            {%for key in dt[0].keys()%}
+            {%for row in dt[0][key]['Sale']%}
+            <div class="sub-jumbotron-body-1">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="body-content jumbotron-body-img">
+                                <img class="body-img" src="{{row[-2]}}" alt="Course" onerror="this.onerror=null;this.src='{{ url_for('static', filename='images/no_photo.png') }}';">
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/sale.png') }}" height="24px">
+                                <p class="col-p1 setpimage">{{row[14]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/bedroom.png') }}">
+                                <p class="col-p1 setpimage">{{row[16]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <img class="col-icon setimage" src="{{ url_for('static', filename='images/icon/body/sq_ft.png') }}">
+                                <p class="col-p1 setpimage">{{row[3]}} Sq Ft</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Min %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][0]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Avg %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][1]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Med %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][2]}}</p>
+                            </div>
+                        </td>
+                        <td class="">
+                            <div class="second-col tabtd">
+                                <p class="p-size">Max %</p>
+                                <p class="p-size setp">{{dt[0][key]['result'][3]}}</p>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <span class="jumbotron-body-p-span"> <p class="jumbotron-body-p"><a style="color: #000000" href="{{row[-5]}}" target="_blank">{{row[4]}}</a></p> </span>
+                    <span class="jumbotron-body-p-span"> <p class="jumbotron-body-p">{{row[-4]}}</p> </span>
+                </table>
+            </div>
+            {%endfor%}
+            {%endfor%}
+        </div>
+        {%endfor%}
+    </div>
+    <div class="view-more-1">
+        <div class="container">
+            <div class="pag">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+

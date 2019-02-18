@@ -1,0 +1,183 @@
+
+<style>
+    a.endlink {
+        display: block;
+        height: 100%;
+    }
+
+    .load-more{
+        text-align: -moz-center;
+        text-align: -webkit-center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .area-body-p {
+        font-size: 14px;
+        font-weight: 600;
+        color: #fff;
+        text-align: right;
+        margin-top: -1px;
+        line-height: 19px;
+    }
+    .text{
+        line-height: 160px;
+    }
+    .area-body-p-1 {
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        text-align: right;
+        line-height: 22px;
+    }
+    @media screen and (orientation:landscape) and  (width:1024px){
+        .layer {
+            background-color: #151F244D;
+            width: 87%;
+        }
+        .text {
+            width: 87%;
+        }
+    }
+    @media screen and (max-width:376px) {
+        .layer {
+            background-color: #151F244D;
+            width: 90%;
+        }
+        .text {
+            width: 90%;
+        }
+    }
+    @media screen and (max-width:320px) {
+        .layer {
+            background-color: #151F244D;
+            width: 88%;
+        }
+        .text {
+            width: 88%;
+        }
+    }
+</style>
+<section id="area-part" class="area-part">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="section-title pb-45">
+                    <h3 class="title">Area Search Result</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="area-body-part" class="area-body-part">
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="area-body">
+                <div id="main-more">
+                    {%for place in places[:2]%}
+                    <div class="row sec-img-part">
+                        <div class="col-lg-3 col-md-6">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[0][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[0][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[0][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[0][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[1][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[1][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[1][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[1][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col sec-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[2][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[2][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[2][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[2][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col sec-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[3][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[3][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[3][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[3][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+                <div id="sub-more">
+                    {%for place in places[2:]%}
+                    <div class="row sec-img-part">
+                        <div class="col-lg-3 col-md-6">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[0][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[0][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[0][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[0][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[1][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[1][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[1][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[1][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col sec-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[2][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[2][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[2][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[2][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-md-6 first-col sec-col">
+                            <a class="endlink" target="_blank" href="/search?city={{city}}&place={{place[3][0]}}&bedrooms={{bedrooms}}&category={{category}}&type={{types}}&agency={{agency}}&period={{period}}&doubles={{drop}}&minprice={{minprice}}&maxprice={{maxprice}}">
+                                <span class="text">View Properties </span>
+                                <span class="layer"></span>
+                                <img class="area-body-img" src="{{place[3][2]}}" alt="image" width="100%">
+                                <span class="area-body-span">
+                                    <p class="area-body-p">{{place[3][0]}}</p>
+                                    <p class="area-body-p-1">No of Properties:{{place[3][1]}}</p>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="load-more"  id="load-more">
+                <button type="button" class="btn btn-default view-more-btn" id="loadmore">LOAD MORE</button>
+            </div>
+        </div>
+    </div>
+</section>

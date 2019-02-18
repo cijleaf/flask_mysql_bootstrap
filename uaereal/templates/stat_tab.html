@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th class="th-redius1">Site</th>
+                                            <th>Last Day</th>
+                                            <th class="th-redius2">Last Week</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {%for site in sites_info:%}
+                                        <tr>
+                                            <td>{{site[0]}}</td>
+                                            <td>{{site[1]}}</td>
+                                            <td>{{site[2]}}</td>
+                                        </tr>
+                                        {%endfor%}
+                                    </tbody>
+                                </table>

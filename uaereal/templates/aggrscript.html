@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    window.onload = function () {
+        {%for dt in data%}
+        $(".sale-properites-{{dt[-1].replace(' ', '')}}").css("display", "block");
+        $(".rent-properites-{{dt[-1].replace(' ', '')}}").css("display", "none");
+         $('.bbrl').addClass('activebtn');
+         {%endfor%}
+    }
+
+    function get_btnvalue(obj) {
+        var id = obj.id;
+        var hasid = '#' + id;
+
+        {%for dt in data%}
+        if (id == 'Sale-{{dt[-1].replace(' ', '')}}') {
+            $('.btn-default-{{dt[-1].replace(' ', '')}}').removeClass('activebtn');
+            $('#Sale-{{dt[-1].replace(' ', '')}}').addClass('activebtn');
+            $(".sale-properites-{{dt[-1].replace(' ', '')}}").css("display", "block");
+            $(".rent-properites-{{dt[-1].replace(' ', '')}}").css("display", "none");
+        }
+        if (id == 'Rent-{{dt[-1].replace(' ', '')}}'){
+            $('.btn-default-{{dt[-1].replace(' ', '')}}').removeClass('activebtn');
+            $('#Rent-{{dt[-1].replace(' ', '')}}').addClass('activebtn');
+            $(".sale-properites-{{dt[-1].replace(' ', '')}}").css("display", "none");
+            $(".rent-properites-{{dt[-1].replace(' ', '')}}").css("display", "block");
+        }
+        {%endfor%}
+    }
+</script>

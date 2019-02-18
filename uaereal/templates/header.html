@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+    <head>
+
+        <!--====== Required meta tags ======-->
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--====== Title ======-->
+        <title>SMARTHOMES</title>
+
+        <!--====== Favicon Icon ======-->
+        <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon/header/logo.png') }}" type="image/png">
+
+        <!--====== Slick css ======-->
+       
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/slick.css') }}">
+
+        <!--====== Animate css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+        <!--====== Nice Select css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nice-select.css') }}">
+
+        <!--====== Nice Number css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.nice-number.min.css') }}">
+
+        <!--====== Magnific Popup css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+        <!--====== Bootstrap css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+        <!--====== Fontawesome css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+
+        <!--====== Default css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/default.css') }}">
+
+        <!--====== Style css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/fSelect.css') }}">
+
+        <!--====== Responsive css ======-->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker3.min.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134215551-1"></script>
+        <script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-134215551-1');
+        </script>
+        <style>
+            .button{
+                    right: 8% !important;
+                }
+            @media only screen and  (max-width: 460px) {
+                .top-icon{
+                    display: none;
+                }
+            }
+            @media only screen and  (width: 1024px) {
+                .button{
+                    right: 8% !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header-part">
+            <div class="header-top d-none d-lg-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="header-contact text-lg-left text-center">
+                                <ul>
+                                    <li><img class="header-icon cursor" src="{{ url_for('static', filename='images/icon/header/fb.png') }}" alt="icon"></li>
+                                    <li><img class="header-icon cursor" src="{{ url_for('static', filename='images/icon/header/g+.png') }}" alt="icon"></li>
+                                    <li><img class="header-icon cursor" src="{{ url_for('static', filename='images/icon/header/twitter.png') }}" alt="icon"></li>
+                                    <li><img class="header-icon cursor" src="{{ url_for('static', filename='images/icon/header/insta.png') }}" alt="icon"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="header-opening-time text-right">
+                                <ul>
+                                    <li class="cursor">English<span><img class="header-icon-span" src="{{ url_for('static', filename='images/icon/header/down.png') }}" alt="icon"></span></li>
+                                    <li class="cursor">AED<span><img class="header-icon-span" src="{{ url_for('static', filename='images/icon/header/down.png') }}" alt="icon"></span></li>
+                                    <li class="cursor">Login<span><img class="header-icon-span" src="{{ url_for('static', filename='images/icon/header/login.png') }}" alt="icon"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-logo-support pt-30 pb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="logo">
+                                <a href="/">
+                                <img class="header-icon-logo" src="{{ url_for('static', filename='images/icon/header/logo.png') }}" alt="icon">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-2 top-icon">
+                            <div class="second-header-1">
+                                <img class="second-header-icon second-header-icon1" src="{{ url_for('static', filename='images/icon/header/phn.png') }}" alt="icon">
+                                <span class="iconspan">+97142820000</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 top-icon">
+                            <div class="second-header">
+                                <img class="second-header-icon-1" src="{{ url_for('static', filename='images/icon/header/time.png') }}" alt="icon">
+                                <span class="iconspan">Mon-Fri 10:00-12:00<br>Sat-Sun 10:00-12:00</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-4 top-icon">
+                            <div class="second-header">
+                                <img class="second-header-icon-1" src="{{ url_for('static', filename='images/icon/header/location.png') }}" alt="icon">
+                                <span class="iconspan">ROAD AI Buston-Casablaca Road,<br>P.O.Box 30880,Dubai,United Arab Emirates</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navigation">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-6 col-sm-6 col-xs-6 header-icon-manu-search">
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mr-auto">
+                                        <li class="nav-item">
+                                            <a {%if pagename == "":%} class="active" {%endif%} href="/">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a {%if pagename == "about":%} class="active" {%endif%} href="/about">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a {%if pagename == "properties":%} class="active" {%endif%} href="/properties">Properties</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a {%if pagename == "blog":%} class="active" {%endif%} href="/blog">Blog</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a {%if pagename == "faq":%} class="active" {%endif%} href="/faq">Faq</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a {%if pagename == "contacts":%} class="active" {%endif%} href="/contacts">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 header-icon-manu-search">
+                            <div class="right-icon text-right">
+                                <input type="text" placeholder="search" class="search">
+                                <img class="header-icon-search button" src="{{ url_for('static', filename='images/icon/header/search.png') }}" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>

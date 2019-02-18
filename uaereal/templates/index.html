@@ -1,0 +1,155 @@
+Not use
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Real Info</title>
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="header">
+        </div>
+        <div id="main">
+            <div id="searchblock">
+                <form action="/search">
+                    <table class="search">
+                        <tr>
+                            <td class="aggr">City<br/>
+                                <select name="city">
+                                    <option value="All">All cities</option>
+                                    {% for city in cities%}
+                                    <option value="{{city[0]}}">{{city[0]}}</option>
+                                    {%endfor%}
+                                </select>
+                            </td>
+                            <td>Type<br/>
+                                <select name="type">
+                                    <option value="Sale">Sale</option>
+                                    <option value="Rent">Rent</option>
+                                </select>
+                            </td>
+
+                            <td class="aggr">Bedrooms<br/>
+                                <select name="bedrooms">
+                                    <option value="All">All</option>
+                                    {% for room in rooms%}
+                                    <option value="{{room[0]}}">{{room[0]}}</option>
+                                    {%endfor%}
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Agency<br/>
+                                <select name="agency">
+                                    <option value="All">All</option>
+                                    <option value="ENSKY REAL ESTATE L.L.C">ENSKY REAL ESTATE L.L.C</option>
+                                    <option value="BETTER HOMES (ABU DHABI BRANCH)">BETTER HOMES (ABU DHABI BRANCH)</option>
+                                </select>
+                            </td>
+                            <td colspan="2">Category<br/>
+                                <select name="category">
+                                    <option value="All">All</option>
+                                    <option value="Commercial">Commercial</option>
+                                    <option value="Residental">Residental</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <div class="choice">
+                                    Min Price    <br>
+                                    <input type="number" name="minprice" class="price">
+                                </div>
+
+                                <div class="choice">
+                                    Max Price    <br>
+                                    <input type="number" name="maxprice" class="price">
+                                </div>
+
+
+
+                                <div class="choice aggr">
+                                    Start date <br>
+                                    <input type="date" name="startdate">
+                                </div>
+
+                                <div class="choice aggr">
+                                    End date <br>
+                                    <input type="date" name="enddate">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+
+                            <td class="aggr">
+                                <div class="choice">
+                                    Min Perc    <br>
+                                    <input type="number" name="minperc" class="price">
+                                </div>
+
+                                <div class="choice">
+                                    Max Perc    <br>
+                                    <input type="number" name="maxperc" class="price">
+                                </div>
+                            </td>
+                            <td  colspan="2" class="aggr">
+                                <input type="checkbox"  name="zeros" value="1">Exclude zero's<br/>
+                                <input type="checkbox"  name="drop" value="1">Drop duplicates<br/>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td colspan="3">
+                                <div class="choice">
+                                    <button type="Submit">Search</button>
+                                </div>
+
+
+                                <div class="choice">
+                                    <button type="Submit" formaction="/download">Download</button>
+                                </div>
+
+
+                                <div class="choice aggr">
+                                    <button type="Submit" formaction="/aggregation">Aggregation</button>
+                                </div>
+
+                                <div class="choice aggr">
+                                    <button type="Submit" formaction="/presearch_map">Map</button>
+                                </div>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+                    <table class="statlog">
+                        <tr>
+                            <td>Site</td>
+                            <td>Last Day</td>
+                            <td>Last Week</td>
+                        </tr>
+
+                        {%for site in day:%}
+                        <tr>
+                            <td>{{site[0]}}</td>
+                            <td>{{site[1]}}</td>
+                            {%for wk in week:%}
+                            {%if wk[0] == site[0]%}
+                            <td>{{wk[1]}}</td>
+                            {%endif%}
+                            {%endfor%}
+                        </tr>
+                        {%endfor%}
+
+                    </table>
+
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

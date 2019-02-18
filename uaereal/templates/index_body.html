@@ -1,0 +1,1370 @@
+
+<style>
+    label {
+        display: block;
+        margin-bottom: .5rem;
+        font-weight: 504;
+    }
+    .gm-style-iw{
+        top: 0px !important;
+        position: absolute;
+        left: 0px !important;
+        width: 100% !important;
+        padding: 0px 0 0px 13px !important;
+    }
+    .singel-course .cont ul li {
+        display: inline-block;
+        margin: 0 0 0 4px;
+    }
+    .bg-img-div{
+        background-color: #1E1E1E4D;
+    }
+    .bg-img-title{
+        position: absolute;
+        margin-top: 60px;
+    }
+    .bgimg{
+        opacity: 0.1;
+        height: 710px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .bg-icon-div-1{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #FFFFFF;
+        margin-top: 165px;
+        border-radius: 15px;
+        border: solid 1px #F4F4F4;
+        box-shadow: 0px 18px 12px #665E62E6;
+    }
+    .bg-icon-1{
+        padding: 45px;
+        width: 200px;
+    }
+    .bg-icon-div-2{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #FFFFFF;
+        margin: 265px 0 0 248px;
+        border-radius: 15px;
+        border: solid 1px #F4F4F4;
+        box-shadow: 0px 18px 12px #665E62E6;
+    }
+    .bg-icon-2{
+        padding: 55px 45px 48px 45px;
+        width: 200px;
+    }
+    .bg-icon-div-3{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #FFFFFF;
+        margin: 164px 0 0 497px;
+        border-radius: 15px;
+        border: solid 1px #F4F4F4;
+        box-shadow: 0px 18px 12px #665E62E6;
+    }
+    .bg-icon-3{
+        padding: 48px 36px 25px 31px;
+        width: 200px;
+    }
+    .bg-icon-div-4{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #FFFFFF;
+        margin: 265px 0 0 745px;
+        border-radius: 15px;
+        border: solid 1px #F4F4F4;
+        box-shadow: 0px 18px 12px #665E62E6;
+    }
+    .bg-icon-4{
+        padding: 55px 45px 27px 45px;
+        width: 200px;
+    }
+    .bg-icon-div-5{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #FFFFFF;
+        margin: 164px 0 0 998px;
+        border-radius: 15px;
+        border: solid 1px #F4F4F4;
+        box-shadow: 0px 18px 12px #665E62E6;
+    }
+    .bg-icon-5{
+        padding: 45px;
+        width: 200px;
+    }
+    .icon-p{
+        color: #0F1C25;
+        line-height: 21px;
+        margin-top: 31px;
+        margin-left: 16px;
+    }
+    .line-1{
+        position: absolute;
+        width: 225px;
+        margin: 110px 0px 0px 88px;
+    }
+    .line-img{
+        width: 265px;
+    }
+    .line-2{
+        position: absolute;
+        width: 225px;
+        margin: 110px 0px 0px 584px;
+    }
+    .line-3{
+        position: absolute;
+        width: 225px;
+        margin: 443px 0px 0px 335px;
+    }
+    .line-5{
+        position: absolute;
+        width: 225px;
+        margin: 459px 0px 0px 843px;
+    }
+    .list{
+        max-height: 250px;
+        overflow-y: scroll !important;
+    }
+    .singel-course .thum .price{
+        right: 0;
+        text-align: right;
+    }
+    .singel-course .thum .price span {
+        width: unset !important;
+    }
+    .nice-select{
+        display: none !important;
+    }
+    .chosen-container-single .chosen-single{
+        background-color: #fff;
+        border-radius: 0px;
+        border: solid 1px #e8e8e8;
+        box-sizing: border-box;
+        clear: both;
+        cursor: pointer;
+        display: block;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: normal;
+        height: 35px;
+        line-height: 33px;
+        outline: none;
+        padding-left: 5px;
+        padding-right: 30px;
+        position: relative;
+        text-align: left !important;
+        transition: all 0.2s ease-in-out;
+        -moz-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        width: auto;
+    }
+    .chosen-container chosen-container-multi{
+        background-color: #fff;
+        border-radius: 5px;
+        border: solid 1px #e8e8e8;
+        box-sizing: border-box;
+        clear: both;
+        cursor: pointer;
+        display: block;
+        float: left;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: normal;
+        height: 42px;
+        line-height: 40px;
+        outline: none;
+        padding-left: 18px;
+        padding-right: 30px;
+        position: relative;
+        text-align: left !important;
+        transition: all 0.2s ease-in-out;
+        -moz-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        width: auto;
+    }
+    .chosen-container {
+        display: block !important;
+    }
+    .chosen-container-multi .chosen-choices{
+        padding: 4px 5px;
+        border: 0px;
+        cursor: pointer;
+    }
+    .chosen-container{
+        width: 100% !important;
+    }
+    .chosen-choices{
+        cursor: pointer;
+    }
+    .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+        background: url("static/images/icon/body/chosen-sprite.png") -42px 1px no-repeat !important;
+    }
+    .chosen-container-multi .chosen-choices li.search-choice {
+        border: 0px;
+    }
+    .chosen-choices::after{
+        border-bottom: 1px solid #29B2AA;
+        border-right: 1px solid #29B2AA;
+        content: '';
+        display: block;
+        height: 10px;
+        margin-top: -7px;
+        pointer-events: none;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform-origin: 66% 66%;
+        transition: all 0.15s ease-in-out;
+        width: 10px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    .chosen-single::after{
+        border-bottom: 1px solid #29B2AA;
+        border-right: 1px solid #29B2AA;
+        content: '';
+        display: block;
+        height: 10px;
+        margin-top: -7px;
+        pointer-events: none;
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform-origin: 66% 66%;
+        transition: all 0.15s ease-in-out;
+        width: 10px;
+        transform: rotate(45deg);
+        cursor: pointer;
+    }
+    .singel-course:hover .thum .image img {
+        transform: none;
+        cursor: pointer;
+    }
+    /*    .singel-course > .thum{
+            cursor: pointer;
+        }*/
+    .chosen-container .chosen-results{
+        max-height: 300px !important;
+        overflow-y: scroll !important;
+        scrollbar-width: thin !important;
+    }
+    .singel-course .thum .price{
+        right: 0;
+        text-align: right;
+    }
+    .singel-course .thum .price span {
+        width: unset !important;
+    }
+    .container-radio {
+        padding-left: 23px;
+    }
+    .chosen-container-single .chosen-single span {
+        display: unset;
+    }
+    .slider-cont-3 span {
+        font-size: 15px;
+    }
+    .slider-cont-3 span {
+        font-size: 15px;
+        color: #00000080;
+    }
+
+
+    @media screen and (orientation:landscape) and  (width:1024px){
+        .bg-icon-div-1 {
+            width: 150px;
+            height: 150px;
+        }
+        .bg-icon-1 {
+            width: 155px;
+            margin: 0px;
+        }
+        .bg-icon-div-2 {
+            width: 150px;
+            height: 150px;
+            margin: 215px 0 0 201px;
+
+        }
+        .bg-icon-2 {
+            width: 155px;
+            margin: -37px 0px 0px -25px;
+            padding: 76px 17px 39px 53px;
+        }
+        .line-1{
+            position: absolute;
+            width: 225px;
+            margin: 100px 0px 0px 77px;
+        }
+        .line-img{
+            width: 196px;
+        }
+        .bg-icon-div-3{
+            width: 150px;
+            height: 150px;
+            margin: 164px 0 0 401px;
+        }
+        .bg-icon-3{
+            width: 155px;
+            margin: 0px;
+        }
+        .bg-icon-div-4{
+            width: 150px;
+            height: 150px;
+            margin: 215px 0 0 607px;
+
+        }
+        .bg-icon-4{
+            width: 155px;
+            margin: -12px 0px 0px -3px;
+        }
+        .bg-icon-div-5{
+            width: 150px;
+            height: 150px;
+            margin: 164px 0 0 803px;
+        }
+        .bg-icon-5{
+            width: 155px;
+            margin: 0px;
+        }
+        .line-3 {
+            width: 225px;
+            margin: 405px 0px 0px 277px;
+        }
+        .line-2 {
+            width: 225px;
+            margin: 98px 0px 0px 481px;
+        }
+        .line-5 {
+            width: 225px;
+            margin: 432px 0px 0px 687px;
+
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+    @media only screen and  (min-width: 1067px) {
+        .bg-img-div{
+            height: 640px !important;
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+    @media only screen and  (max-width: 769px) {
+        .bg-icon-div-1 {
+            width: 100px;
+            height: 100px;
+        }
+        .bg-icon-1 {
+            width: 155px;
+            margin: -23px;
+        }
+        .bg-icon-div-2 {
+            width: 100px;
+            height: 100px;
+            margin: 215px 0 0 141px;
+
+        }
+        .bg-icon-2 {
+            width: 155px;
+            margin: -37px 0px 0px -25px;
+        }
+        .line-1{
+            position: absolute;
+            width: 225px;
+            margin: 123px 0px 0px 46px;
+        }
+        .line-img{
+            width: 155px;
+        }
+        .bg-icon-div-3{
+            width: 100px;
+            height: 100px;
+            margin: 164px 0 0 294px;
+        }
+        .bg-icon-3{
+            width: 155px;
+            margin: -23px;
+        }
+        .bg-icon-div-4{
+            width: 100px;
+            height: 100px;
+            margin: 215px 0 0 456px;
+
+        }
+        .bg-icon-4{
+            width: 155px;
+            margin: -37px 0px 0px -25px;
+        }
+        .bg-icon-div-5{
+            width: 100px;
+            height: 100px;
+            margin: 164px 0 0 605px;
+        }
+        .bg-icon-5{
+            width: 155px;
+            margin: -23px;
+        }
+        .line-3 {
+            width: 225px;
+            margin: 443px 0px 0px 188px;
+        }
+        .line-2 {
+            width: 225px;
+            margin: 122px 0px 0px 344px;
+        }
+        .line-5 {
+            width: 225px;
+            margin: 536px 0px 0px 519px;
+
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+    @media only screen and  (max-width: 460px) {
+        .bg-icon-div-1 {
+            width: 70px;
+            height: 70px;
+            margin: 165px 0 0 18px;
+        }
+        .bg-icon-1 {
+            width: 54px;
+            margin: 10px;
+            padding: 0px;
+        }
+
+        .bg-icon-div-2 {
+            width: 70px;
+            height: 70px;
+            margin: 215px 0 0 94px;
+        }
+        .bg-icon-2 {
+            width: 60px;
+            margin: 9px 0px 0px 4px;
+            padding: 0px;
+        }
+        .line-1{
+            position: absolute;
+            margin: 143px 0px 0px 49px;
+        }
+        .line-img{
+            width: 85px;
+        }
+        .bg-icon-div-3{
+            width: 70px;
+            height: 70px;
+            margin: 164px 0 0 169px;
+        }
+        .bg-icon-3{
+            width: 60px;
+            margin: 4px;
+            padding: 0px;
+        }
+        .bg-icon-div-4{
+            width: 70px;
+            height: 70px;
+            margin: 215px 0 0 247px;
+        }
+        .bg-icon-4{
+            width: 51px;
+            margin: 8px 0 0 9px;
+            padding: 0px;
+        }
+        .bg-icon-div-5{
+            width: 70px;
+            height: 70px;
+            margin: 163px 0 0 326px;
+        }
+        .bg-icon-5{
+            width: 60px;
+            margin: 6px;
+            padding: 0px;
+        }
+        .line-3 {
+            margin: 266px 0px 0px 126px;
+        }
+        .line-2 {
+            margin: 142px 0px 0px 205px;
+        }
+        .line-5 {
+            margin: 268px 0px 0px 283px;
+
+        }
+        .icon-p{
+            display: none;
+        }
+        .bg-img-title {
+            position: absolute;
+            margin-top: 25px;
+        }
+        .bgimg {
+            height: 383px;
+        }
+        #teachers-part {
+            padding-top: 15px;
+            padding-bottom: 0px;
+        }
+        .pt-70 {
+            padding-top: 0px;
+
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+    @media only screen and  (max-width: 375px) {
+        .bg-icon-div-1 {
+            width: 70px;
+            height: 70px;
+            margin: 165px 0 0 7px;
+        }
+        .bg-icon-1 {
+            width: 54px;
+            margin: 10px;
+            padding: 0px;
+        }
+
+        .bg-icon-div-2 {
+            width: 70px;
+            height: 70px;
+            margin: 215px 0 0 79px;
+        }
+        .bg-icon-2 {
+            width: 60px;
+            margin: 9px 0px 0px 4px;
+            padding: 0px;
+        }
+        .line-1{
+            position: absolute;
+            margin: 143px 0px 0px 29px;
+        }
+        .line-img{
+            width: 85px;
+        }
+        .bg-icon-div-3{
+            width: 70px;
+            height: 70px;
+            margin: 164px 0 0 152px;
+        }
+        .bg-icon-3{
+            width: 60px;
+            margin: 4px;
+            padding: 0px;
+        }
+        .bg-icon-div-4{
+            width: 70px;
+            height: 70px;
+            margin: 215px 0 0 225px;
+        }
+        .bg-icon-4{
+            width: 55px;
+            margin: 6px 0px 0px 5px;
+            padding: 0px;
+        }
+        .bg-icon-div-5{
+            width: 70px;
+            height: 70px;
+            margin: 163px 0 0 298px;
+        }
+        .bg-icon-5{
+            width: 60px;
+            margin: 6px;
+            padding: 0px;
+        }
+        .line-3 {
+            margin: 266px 0px 0px 110px;
+        }
+        .line-2 {
+            margin: 142px 0px 0px 187px;
+        }
+        .line-5 {
+            margin: 268px 0px 0px 267px;
+
+        }
+        .icon-p{
+            display: none;
+        }
+        .bg-img-title {
+            position: absolute;
+            margin-top: 25px;
+        }
+        .bgimg {
+            height: 383px;
+        }
+        #teachers-part {
+            padding-top: 15px;
+            padding-bottom: 0px;
+        }
+        .pt-70 {
+            padding-top: 0px;
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+    @media only screen and  (max-width: 414px) {
+        .slider-cont-3 span {
+            font-size: 13px;
+        }
+    }
+    @media only screen and  (max-width: 360px) {
+        .bg-icon-div-1 {
+            width: 65px;
+            height: 65px;
+            margin: 165px 0 0 7px;
+        }
+        .bg-icon-1 {
+            width: 45px;
+            margin: 10px;
+            padding: 0px;
+        }
+
+        .bg-icon-div-2 {
+            width: 65px;
+            height: 65px;
+            margin: 215px 0 0 76px;
+        }
+        .bg-icon-2 {
+            width: 52px;
+            margin: 11px 0px 0px 6px;
+            padding: 0px;
+        }
+        .line-1{
+            position: absolute;
+            /*width: 95px;*/
+            margin: 143px 0px 0px 29px;
+        }
+        .line-img{
+            width: 75px;
+        }
+        .bg-icon-div-3{
+            width: 65px;
+            height: 65px;
+            margin: 164px 0 0 146px;
+        }
+        .bg-icon-3{
+            width: 55px;
+            margin: 6px;
+            padding: 0px;
+        }
+        .bg-icon-div-4{
+            width: 65px;
+            height: 65px;
+            margin: 215px 0 0 217px;
+        }
+        .bg-icon-4{
+            width: 48px;
+            margin: 8px 0px 0px 7px;
+            padding: 0px;
+        }
+        .bg-icon-div-5{
+            width: 65px;
+            height: 65px;
+            margin: 163px 0 0 288px;
+        }
+        .bg-icon-5{
+            width: 55px;
+            margin: 9px 8px 8px 6px;
+            padding: 0px;
+        }
+        .line-3 {
+            /*width: 225px;*/
+            margin: 266px 0px 0px 110px;
+        }
+        .line-2 {
+            /*width: 225px;*/
+            margin: 142px 0px 0px 178px;
+        }
+        .line-5 {
+            /*width: 225px;*/
+            margin: 268px 0px 0px 256px;
+
+        }
+        .icon-p{
+            display: none;
+        }
+        .bg-img-title {
+            position: absolute;
+            margin-top: 25px;
+        }
+        .bgimg {
+            height: 383px;
+        }
+        #teachers-part {
+            padding-top: 15px;
+            padding-bottom: 0px;
+        }
+        .pt-70 {
+            padding-top: 0px;
+
+        }
+        .topnav{
+            margin-top: 20px;
+        }
+    }
+
+</style>
+<style>
+
+    .gm-style-iw{
+        top: 0px !important;
+        width: unset;
+    }
+    .map-slide{
+        overflow-y: scroll;
+        height: 407px;
+        scrollbar-width: thin !important;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: #EEEEEE;
+        margin-top: 10px;
+    }
+    .topnav a {
+        float: left;
+        color: #333;
+        text-align: center;
+        padding: 14px 17px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+    .topnav a.active {
+        background-color: #29B2AA;
+        color: white;
+
+    }
+    a{
+        cursor: pointer;
+    }
+    .map-slide-image{
+        width: 130px;
+    }
+    .map-image{
+        width: 120px;
+        height: 125px;
+    }
+    .map-slide-image{
+        margin: 11px;
+    }
+    .map-ul{
+        margin: 16px 0px 0px 0px;
+        display: flex;
+        border-bottom: solid 2px #EEEEEE;
+        padding-bottom: 13px;
+    }
+    .title-li{
+        margin: 0px 0px 0px 7px;
+    }
+    .title-li p{
+        font-size: 14px !important;
+    }
+    th{
+        border-bottom: solid 1px #EEEEEE;
+        font-size: 12px;
+        font-weight: 100;
+        padding-right: 14px;
+    }
+    td{
+        font-size: 13px;
+    }
+
+    .drop-down{
+        margin-bottom: 15px;
+    }
+    #search-btn{
+        margin-top: 41px;
+        border-radius: 7px;
+    }
+    .list{
+        max-height: 300px !important;
+        overflow-y: scroll !important;
+        scrollbar-width: thin !important;
+    }
+    .gm-style-iw{
+        max-width: 400px !important;
+    }
+    .gm-ui-hover-effect{
+        margin: 5px !important;
+    }
+    @media only screen and  (max-width: 1200px) {
+        .topnav a {
+            padding: 14px 13px;
+            font-size: 14px;
+        }
+    }
+    @media only screen and  (max-width: 490px) {
+        .topnav a {
+            padding: 14px 14px;
+            font-size: 14px;
+        }
+        #search-btn{
+            margin-top: 25px;
+            border-radius: 7px;
+        }
+        .gm-style-iw{
+            max-width: 228px !important;
+        }
+    }
+    @media only screen and  (max-width: 375px) {
+        .topnav a {
+            padding: 12px 12px;
+            font-size: 13px;
+        }
+    }
+    @media only screen and  (max-width: 360px) {
+        .topnav a {
+            padding: 12px 12px;
+            font-size: 12px;
+        }
+    }
+
+</style>
+<section id="slider-part-1" class="bg_cover"  style="background-image: url({{ url_for('static', filename='images/index/img_bg.jpg') }})">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-10 col-sm-10 slider-cont-3">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 form-header-btn">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-default bbrl" id="Search" onclick="get_btnvalue(this)">Search</button>
+                            <button type="button" class="btn btn-default" id="Aggregation" onclick="get_btnvalue(this)">Aggregation</button>
+                            <button type="button" class="btn btn-default bbrr" id="Map" onclick="get_btnvalue(this)">Map</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3"></div>
+                </div>
+                <div class="container">
+                    <div id="aggregationform">
+                        {%include 'aggrform.html'%}
+                    </div>
+                    <div id="searchform" style="display: none;">
+                        {%include 'searchform.html'%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="course-part" class="pt-115 pb-120 gray-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-title pb-45">
+                    <h3 class="title">Top Pics</h3>
+                </div>
+            </div>
+        </div>
+        <div id="main-more">
+            <div class="row mt-30">
+                {%for row in top_listings[:3]%}
+                <div class="col-lg-4 col-md-6 mar-top">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <span class="layer-1"></span>
+                            <div class="image">
+                                <a href="{{row[-5]}}" target="_blank">
+                                    <img src="{{row[-2]}}" alt="Course">
+                                </a>
+                            </div>
+                            <div class="price col-12">
+                                <span>{{row[14]}}AED</span>
+                            </div>
+                        </div>
+                        <div class="cont box-shadow">
+                            <a href="{{row[-5]}}" target="_blank"><h5>{{row[4]}}</h5></a>
+                            <div class="img-body">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </li>
+                                    <li>
+                                        <p>{{row[-3]}},{{row[5]}}</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/bedroom.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p">{{row[16]}} Bedrooms</p>
+                                    </li>
+                                    <li class="first-li">
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/bathroom.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p">{{row[15]}} Bathrooms</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/sq_ft.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p"> Sq Ft: {{row[3]}}</p>
+                                    </li>
+                                    <!--
+                                    <li class="second-li">
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/garage.png') }}">
+                                    </li>
+                                     <li>
+                                        <p class="second-p">1 Garage</p>
+                                    </li>
+                                    -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div id="sub-more">
+            <div class="row mt-30">
+                {%for row in top_listings[3:]%}
+                <div class="col-lg-4 col-md-6 mar-top">
+                    <div class="singel-course">
+                        <div class="thum">
+                            <span class="layer-1"></span>
+                            <div class="image">
+                                <a href="{{row[-5]}}" target="_blank">
+                                    <img src="{{row[-2]}}" alt="Course">
+                                </a>
+                            </div>
+                            <div class="price col-12">
+                                <span>{{row[14]}}AED</span>
+                            </div>
+                        </div>
+                        <div class="cont box-shadow">
+                            <a href="{{row[-5]}}" target="_blank"><h5>{{row[4]}}</h5></a>
+                            <div class="img-body">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    </li>
+                                    <li>
+                                        <p>{{row[-3]}},{{row[5]}}</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/bedroom.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p">{{row[16]}} Bedrooms</p>
+                                    </li>
+                                    <li class="first-li">
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/bathroom.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p">{{row[15]}} Bathrooms</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/sq_ft.png') }}">
+                                    </li>
+                                    <li>
+                                        <p class="second-p"> Sq Ft: {{row[3]}}</p>
+                                    </li>
+                                    <!--
+                                    <li class="second-li">
+                                        <img class="garage" src="{{ url_for('static', filename='images/icon/body/garage.png') }}">
+                                    </li>
+                                     <li>
+                                        <p class="second-p">1 Garage</p>
+                                    </li>
+                                    -->
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        <div class="row" id="btn-more">
+            <div class="col-lg-4">
+                <div class="view-more">
+                    <button type="button" class="btn btn-default view-more-btn" id="vewmore">VIEW MORE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="teachers-part" class="pt-70 pb-120">
+    <div class="container">
+        <h3 class="title bg-img-title">How it Works</h3>
+        <div class="row">
+            <div class="line-1">
+                <img class="line-img" src="static/images/index/Line1.png">
+            </div>
+            <div class="bg-icon-div-1">
+                <img class="bg-icon-1" src="static/images/index/icon2.jpg">
+                <p class="icon-p">Our AI based Algorithm Scans Leading Real Estate Portals to find  the best deal for you</p>
+            </div>
+            <div class="bg-icon-div-2">
+                <img class="bg-icon-2" src="static/images/index/icon1.jpg">
+                <p class="icon-p">Perform a Smart Search by defining your Prefernces</p>
+            </div>
+            <div class="line-3">
+                <img class="line-img" src="static/images/index/Line2.png">
+            </div>
+            <div class="bg-icon-div-3">
+                <img class="bg-icon-3" src="static/images/index/icon31.png">
+                <p class="icon-p">Search Results organised by various Areas</p>
+            </div>
+            <div class="line-2">
+                <img class="line-img" src="static/images/index/Line1.png">
+            </div>
+            <div class="bg-icon-div-4">
+                <img class="bg-icon-4" src="static/images/index/icon4.jpg">
+                <p class="icon-p">Find all the Listing Area organised by building showing the comparison all majoe listing websites</p>
+            </div>
+            <div class="bg-icon-div-5">
+                <img class="bg-icon-5" src="static/images/index/icon52.png">
+                <p class="icon-p">Choose the best Result that matches your preference</p>
+            </div>
+            <div class="line-5">
+                <img class="line-img" src="static/images/index/Line2.png">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bg-img-div">
+        <img class="bgimg" src="static/images/index/bgImage.jpg" width="100%">
+
+    </div>
+</section>
+<section id="map-view" class="bg_cover">
+    <div class="container">
+        <div class="row drop-down">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">City</label>
+                    <select class="test" name="test" multiple>
+                        <option value="All"> All City</option>
+                        <option>American Black Bear</option>
+                        <option>Asiatic Black Bear</option>
+                        <option>Brown Bear</option>
+                        <option>Giant Panda</option>
+                        <option>Sloth Bear</option>
+                        <option>Sun Bear</option>
+                        <option>Polar Bear</option>
+                        <option>Spectacled Bear</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">Bedrooms</label>
+                    <select class="test" id="city" multiple>
+                        <option>All</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">Min Price</label>
+                    <select class="test" id="minPrice">
+                        <option value="">Select</option>
+                        {% for i in range(10000,50000001,10000)%}
+                        <option value="{{i}}">{{i}} AED</option>
+                        {%endfor%}
+                    </select>
+                </div> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">Max Price</label>
+                    <select class="test" id="maxPrice">
+                        <option value="">Select</option>
+                        {% for i in range(10000,50000001,10000)%}
+                        <option value="{{i}}">{{i}} AED</option>
+                        {%endfor%}
+                        {% for i in range(51000000,400000001,1000000)%}
+                        <option value="{{i}}">{{i}} AED</option>
+                        {%endfor%}
+                    </select>
+                </div> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">Min Percent</label>
+                    <select class="test" id="minPrice">
+                        <option>-Select-</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+
+                    </select>
+                </div> 
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                <div class="form-group">
+                    <label for="usr">Max Percent</label>
+                    <select class="test" id="maxPrice">
+                        <option>-Select-</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div> 
+            </div>
+            <div class="col-12">
+                <div class="btn-go-reset">
+                    <button type="button" class="btn btn-default" id="search-btn" style="background-color: #29B2AA;">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                <div id="map" style="width: 100%; height: 450px;"></div>
+            </div> 
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+                <div class="topnav">
+                    <a class="btn-active" id="all" onclick="get_btnvalue1(id);">All</a>
+                    <a class="btn-active" id="bayut" onclick="get_btnvalue1(id);">bayut.com</a>
+                    <a class="btn-active" id="dubizzel" onclick="get_btnvalue1(id);">dubizzel.com</a>
+                    <a class="btn-active" id="propertyinder" onclick="get_btnvalue1(id);">propertyinder.ae</a>
+                </div>
+                <div id="bayut-main">
+                    <div class="map-slide">
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="dubizzel-main">
+                    <div class="map-slide">
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="propertyinder-main">
+                    <div class="map-slide">
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                        <ul class="map-ul">
+                            <li>
+                                <img class="map-image" src="https://www.propertyfinder.ae/property/4368b64817317a2c1677e45003094982/668/452/MODE/9bc052/6714374-f87fco.jpg">
+                            </li>
+                            <li class="title-li">
+                                <p title="top-title">Alluring 3BR Ababian Villa With Garden</p>
+                                <p title="sub-title" style="color: #29B2AA;">Linecoine Park</p>
+                                <p title="desc">1 beds | 1 baths | 1200 sq.ft</p>
+                                <!--                                <table>
+                                                                    <tr>
+                                                                        <th>Cash On Cash</th>
+                                                                        <th>Trad. <a style="color: #29B2AA">3.01%</a></th>
+                                                                        <th>Airbnb. <a style="color: #29B2AA">5.70%</a></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Cap.Rate</td>
+                                                                        <td>Trad.7%</td>
+                                                                        <td>Airbnb.10%</td>
+                                                                    </tr>
+                                                                </table>-->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+</section>
+
+
